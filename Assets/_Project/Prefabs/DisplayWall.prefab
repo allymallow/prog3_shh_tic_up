@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4014896654269541360}
   - component: {fileID: 3225606033619348425}
   - component: {fileID: 2784887009838557839}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DisplayWall
-  m_TagString: Untagged
+  m_TagString: CanHideBehind
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

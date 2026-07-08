@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2415754888491298024}
   - component: {fileID: 7442476836161313241}
   - component: {fileID: -9048673404779084852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ReceptionDesk
-  m_TagString: Untagged
+  m_TagString: CanHideBehind
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,9 +151,9 @@ GameObject:
   - component: {fileID: 8173059512510393527}
   - component: {fileID: 5916893480334545563}
   - component: {fileID: 5981797842293880715}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ReceptionDesk
-  m_TagString: Untagged
+  m_TagString: CanHideBehind
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -289,9 +289,9 @@ GameObject:
   - component: {fileID: 5198522211001819517}
   - component: {fileID: 294112987650944897}
   - component: {fileID: 8396682543360968703}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ReceptionDesk
-  m_TagString: Untagged
+  m_TagString: CanHideBehind
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
