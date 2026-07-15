@@ -31,6 +31,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1032238869602687470}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6500126131456571083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5734624195994291265}
+  - component: {fileID: 7242320959778078708}
+  m_Layer: 0
+  m_Name: Vision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5734624195994291265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6500126131456571083}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.06, y: -0.08, z: 0}
+  m_LocalScale: {x: 1.826651, y: 1.826651, z: 1.826651}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1032238869602687470}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &7242320959778078708
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6500126131456571083}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 1.1067039, y: 0}
+  m_Radius: 1.1522399
 --- !u!1 &7057886826344583750
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,8 +110,9 @@ GameObject:
   - component: {fileID: 1032238869602687470}
   - component: {fileID: 2213472783692319734}
   - component: {fileID: 8665775325114038769}
-  - component: {fileID: 1476480667733351514}
   - component: {fileID: 6160019045402814464}
+  - component: {fileID: 1476480667733351514}
+  - component: {fileID: 2515481580279167368}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Enemy
@@ -65,6 +134,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7965184874609475720}
+  - {fileID: 5734624195994291265}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2213472783692319734
@@ -162,6 +232,33 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.50000006
+--- !u!50 &6160019045402814464
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7057886826344583750}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &1476480667733351514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +274,7 @@ MonoBehaviour:
   fsm:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
-    name: FSM
+    name: GuardStates
     startState: Move to Patrol A
     states:
     - name: Move to Patrol A
@@ -185,7 +282,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 466
+        x: 482
         y: 100
         width: 141.288
         height: 48
@@ -203,7 +300,7 @@ MonoBehaviour:
         linkTarget: 0
         colorIndex: 3
       - fsmEvent:
-          name: PlayerHeard
+          name: PLAYER HEARD
           isSystemEvent: 0
           isGlobal: 0
         toState: Alerted
@@ -303,26 +400,54 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 63.734375
-        y: 396.4453
-        width: 100
-        height: 16
+        x: 64.49219
+        y: 390.85938
+        width: 190.896
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions: []
+      transitions:
+      - fsmEvent:
+          name: PLAYER IN VISION
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Chasing
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 6
+      - fsmEvent:
+          name: PLAYER NOT IN VISION
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Looking
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.Vector2MoveTowards
+        - HutongGames.PlayMaker.Actions.LookAt2d
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 00
-        actionStartIndex: 00000000
-        actionHashCodes: 4a906600
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0001
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 4a906600a725db00
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -347,8 +472,20 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0.1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams: []
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
         fsmVector2Params:
         - useVariable: 0
           name: 
@@ -362,39 +499,73 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: {x: 0, y: 0}
-        fsmVector3Params: []
-        fsmColorParams: []
+        - useVariable: 1
+          name: GuardFacingDirection
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0}
+        fsmVector3Params:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {r: 0, g: 1, b: 0, a: 1}
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
         - 
-        byteData: 
+        byteData: 01
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 25000000250000000f0000000f00000017000000
+        paramDataType: 25000000250000000f0000000f0000001700000014000000250000001c0000000f000000110000001900000001000000
         paramName:
         - source
         - target
         - maxSpeed
         - finishDistance
         - finishEvent
-        paramDataPos: 0000000001000000000000000100000000000000
-        paramByteDataSize: 0000000000000000000000000000000000000000
+        - gameObject
+        - vector2Target
+        - vector3Target
+        - rotationOffset
+        - debug
+        - debugLineColor
+        - everyFrame
+        paramDataPos: 000000000100000000000000010000000000000000000000020000000000000002000000000000000000000000000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
     - name: Looking
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 104.94531
-        y: 469.22656
-        width: 100
-        height: 16
+        x: 67.21094
+        y: 488.41406
+        width: 158.25601
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions: []
+      transitions:
+      - fsmEvent:
+          name: PLAYER IN VISION
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Chasing
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames: []
         customNames: []
@@ -439,14 +610,23 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 99.72656
-        y: 500.14062
-        width: 100
-        height: 16
+        x: 55.804688
+        y: 567.125
+        width: 190.896
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions: []
+      transitions:
+      - fsmEvent:
+          name: PLAYER NOT IN VISION
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Looking
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames: []
         customNames: []
@@ -491,7 +671,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 464
+        x: 480
         y: 176
         width: 141.12
         height: 48
@@ -509,7 +689,7 @@ MonoBehaviour:
         linkTarget: 0
         colorIndex: 3
       - fsmEvent:
-          name: PlayerHeard
+          name: PLAYER HEARD
           isSystemEvent: 0
           isGlobal: 0
         toState: Alerted
@@ -609,7 +789,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 458.28125
+        x: 474.28125
         y: 261.96875
         width: 140.656
         height: 48
@@ -627,7 +807,7 @@ MonoBehaviour:
         linkTarget: 0
         colorIndex: 3
       - fsmEvent:
-          name: PlayerHeard
+          name: PLAYER HEARD
           isSystemEvent: 0
           isGlobal: 0
         toState: Alerted
@@ -727,7 +907,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 457.89844
+        x: 473.89844
         y: 343.8672
         width: 141.936
         height: 48
@@ -745,7 +925,7 @@ MonoBehaviour:
         linkTarget: 0
         colorIndex: 3
       - fsmEvent:
-          name: PlayerHeard
+          name: PLAYER HEARD
           isSystemEvent: 0
           isGlobal: 0
         toState: Alerted
@@ -845,7 +1025,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 450.3672
+        x: 466.3672
         y: 423.76562
         width: 140.176
         height: 48
@@ -863,7 +1043,7 @@ MonoBehaviour:
         linkTarget: 0
         colorIndex: 3
       - fsmEvent:
-          name: PlayerHeard
+          name: PLAYER HEARD
           isSystemEvent: 0
           isGlobal: 0
         toState: Alerted
@@ -963,7 +1143,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 449.6328
+        x: 465.6328
         y: 494.95312
         width: 139.776
         height: 48
@@ -981,7 +1161,7 @@ MonoBehaviour:
         linkTarget: 0
         colorIndex: 3
       - fsmEvent:
-          name: PlayerHeard
+          name: PLAYER HEARD
           isSystemEvent: 0
           isGlobal: 0
         toState: Alerted
@@ -1081,7 +1261,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 447.39062
+        x: 463.39062
         y: 571.46094
         width: 141.712
         height: 48
@@ -1099,7 +1279,7 @@ MonoBehaviour:
         linkTarget: 0
         colorIndex: 3
       - fsmEvent:
-          name: PlayerHeard
+          name: PLAYER HEARD
           isSystemEvent: 0
           isGlobal: 0
         toState: Alerted
@@ -1199,8 +1379,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 436.15625
-        y: 651.6797
+        x: 459.7578
+        y: 664.7031
         width: 142.024
         height: 48
       isBreakpoint: 0
@@ -1217,7 +1397,7 @@ MonoBehaviour:
         linkTarget: 0
         colorIndex: 3
       - fsmEvent:
-          name: PlayerHeard
+          name: PLAYER HEARD
           isSystemEvent: 0
           isGlobal: 0
         toState: Alerted
@@ -1313,10 +1493,16 @@ MonoBehaviour:
         paramDataPos: 00000000000000000000000000000000000000000100000000000000
         paramByteDataSize: 00000000000000000000000000000000000000000000000000000000
     events:
-    - name: PlayerHeard
+    - name: ARRIVED
       isSystemEvent: 0
       isGlobal: 0
-    - name: ARRIVED
+    - name: PLAYER HEARD
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: PLAYER IN VISION
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: PLAYER NOT IN VISION
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions: []
@@ -1350,7 +1536,19 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {x: 0, y: 0}
-      vector3Variables: []
+      - useVariable: 1
+        name: GuardFacingDirection
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0}
+      vector3Variables:
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0}
       colorVariables: []
       rectVariables: []
       quaternionVariables: []
@@ -1362,7 +1560,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -1410,30 +1608,281 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
---- !u!50 &6160019045402814464
-Rigidbody2D:
-  serializedVersion: 5
+--- !u!114 &2515481580279167368
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7057886826344583750}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PlayMaker.dll::PlayMakerFSM
+  fsm:
+    dataVersion: 2
+    usedInTemplate: {fileID: 0}
+    name: GuardVision
+    startState: Init
+    states:
+    - name: Init
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 50
+        y: 100
+        width: 158.25601
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: PLAYER IN VISION
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Player in Vision
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    - name: Player in Vision
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 54.007812
+        y: 166.40625
+        width: 173.376
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: 'PLAYER SEEN LOSS '
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Player Caught
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: PLAYER LEFT VISION
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Init
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    - name: Player Caught
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 66.82031
+        y: 239.60156
+        width: 124.416
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    events:
+    - name: PLAYER IN VISION
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: 'PLAYER SEEN LOSS '
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: PLAYER LEFT VISION
+      isSystemEvent: 0
+      isGlobal: 0
+    globalTransitions: []
+    variables:
+      floatVariables: []
+      intVariables: []
+      boolVariables: []
+      stringVariables: []
+      vector2Variables: []
+      vector3Variables: []
+      colorVariables: []
+      rectVariables: []
+      quaternionVariables: []
+      gameObjectVariables: []
+      objectVariables: []
+      materialVariables: []
+      textureVariables: []
+      arrayVariables: []
+      enumVariables: []
+      categories:
+      - 
+      variableCategoryIDs: 
+    description: 
+    docUrl: 
+    showStateLabel: 0
+    maxLoopCount: 0
+    watermark: 
+    password: 
+    locked: 0
+    manualUpdate: 0
+    outVariableIndices: 
+    keepDelayedEventsOnStateExit: 0
+    preprocessed: 0
+    ExposedEvents: []
+    OutputEvents: []
+    RestartOnEnable: 1
+    ResetVariablesOnEnable: 0
+    EnableDebugFlow: 0
+    EnableBreakpoints: 1
+    editorFlags: 225
+    activeStateName: 
+    mouseEvents: 0
+    handleLevelLoaded: 0
+    handleTriggerEnter2D: 0
+    handleTriggerExit2D: 0
+    handleTriggerStay2D: 0
+    handleCollisionEnter2D: 0
+    handleCollisionExit2D: 0
+    handleCollisionStay2D: 0
+    handleTriggerEnter: 0
+    handleTriggerExit: 0
+    handleTriggerStay: 0
+    handleCollisionEnter: 0
+    handleCollisionExit: 0
+    handleCollisionStay: 0
+    handleParticleCollision: 0
+    handleControllerColliderHit: 0
+    handleJointBreak: 0
+    handleJointBreak2D: 0
+    handleOnGUI: 0
+    handleFixedUpdate: 0
+    handleLateUpdate: 0
+    handleApplicationEvents: 0
+    handleUiEvents: 0
+    handleLegacyNetworking: 0
+    handleAnimatorMove: 0
+    handleAnimatorIK: 0
+  fsmTemplate: {fileID: 0}
+  eventHandlerComponentsAdded: 0
