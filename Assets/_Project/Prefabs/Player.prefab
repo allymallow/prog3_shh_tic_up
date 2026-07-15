@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2055450718071717401
 Transform:
   m_ObjectHideFlags: 0
@@ -84,7 +84,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6937903178804104739
 Transform:
   m_ObjectHideFlags: 0
@@ -153,7 +153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8396058448426201617
 Transform:
   m_ObjectHideFlags: 0
@@ -353,9 +353,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1262379589782399242}
   - component: {fileID: 4289323359853768144}
-  - component: {fileID: 5930462450043906219}
+  - component: {fileID: 3894083273404305827}
   - component: {fileID: 4537219280770142288}
   - component: {fileID: 2802562285944186926}
+  - component: {fileID: 5930462450043906219}
+  - component: {fileID: 4534856474366080298}
+  - component: {fileID: 1448996207557278783}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -440,6 +443,109 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &3894083273404305827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8630048517006486397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: 74e97c79fe3e541469f86b5d37225eb1, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!50 &4537219280770142288
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8630048517006486397}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &2802562285944186926
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8630048517006486397}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 2}
+  m_EdgeRadius: 0
 --- !u!114 &5930462450043906219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,10 +569,10 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 64
-        y: 112
-        width: 161.992
-        height: 48
+        x: 61.882812
+        y: 112.140625
+        width: 159.392
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -480,50 +586,29 @@ MonoBehaviour:
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
-      - fsmEvent:
-          name: TRIGGER ENTER 2D
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: HidePrompt
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.DebugLog
-        - HutongGames.PlayMaker.Actions.GetAxis
-        - HutongGames.PlayMaker.Actions.GetAxis
-        - HutongGames.PlayMaker.Actions.SetVector2XY
+        - HutongGames.PlayMaker.Actions.SetBoolValue
+        - HutongGames.PlayMaker.Actions.PlayerInputGetVector2
         - HutongGames.PlayMaker.Actions.Vector2Normalize
         - HutongGames.PlayMaker.Actions.Vector2Multiply
-        - HutongGames.PlayMaker.Actions.TranslatePosition2d
+        - HutongGames.PlayMaker.Actions.SetVelocity2d
         - HutongGames.PlayMaker.Actions.SetRotation
         - HutongGames.PlayMaker.Actions.GetKeyDown
-        - HutongGames.PlayMaker.Actions.Trigger2dEvent
         customNames:
         - 
         - 
         - 
-        - Set Vector2 XY
         - 
         - 
         - 
-        - 
-        - 
-        - 
-        actionEnabled: 01010101010101010101
-        actionIsOpen: 01000000000000000000
-        actionStartIndex: 0000000003000000080000000d0000001200000014000000170000001e000000270000002a000000
-        actionHashCodes: 9c59e50111839a0011839a00f9bc2503c612680230525b010cf26a00979e4104ff77a90449491604
+        - 'GetKeyDown: LShift PlayerRunningTrue '
+        actionEnabled: 01010101010101
+        actionIsOpen: 00000000000000
+        actionStartIndex: 0000000003000000090000000b0000000e000000140000001d000000
+        actionHashCodes: 27fbe10340103905c612680230525b0168fde304979e4104c7b4ad04
         unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
+        fsmGameObjectParams: []
         fsmOwnerDefaultParams:
         - ownerOption: 0
           gameObject:
@@ -555,68 +640,27 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams:
+        fsmStringParams: []
+        fsmObjectParams:
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: Walking
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: Horizontal
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: Vertical
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: CanHideBehind
-        fsmObjectParams: []
+          typeName: UnityEngine.InputSystem.InputActionReference
+          value: {fileID: -1680190386980627800, guid: 74e97c79fe3e541469f86b5d37225eb1, type: 3}
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
-        - useVariable: 0
+        - useVariable: 1
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
-        - useVariable: 1
-          name: InputX
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
           value: 0
-        - useVariable: 0
+        - useVariable: 1
           name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 1
-          name: InputY
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: InputX
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: InputY
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -626,7 +670,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 2
+          value: 3
         - useVariable: 1
           name: 
           tooltip: 
@@ -659,8 +703,8 @@ MonoBehaviour:
           value: 0
         fsmIntParams: []
         fsmBoolParams:
-        - useVariable: 0
-          name: 
+        - useVariable: 1
+          name: IsRunning
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -678,12 +722,6 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         fsmVector2Params:
-        - useVariable: 1
-          name: PlayerMoveDirection
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0}
         - useVariable: 1
           name: PlayerMoveDirection
           tooltip: 
@@ -726,32 +764,22 @@ MonoBehaviour:
           value: {x: 0, y: 0, z: 0, w: 0}
         stringParams:
         - PlayerRunningTrue
-        - TRIGGER ENTER 2D
-        byteData: 000000000101010101010000000001010000000001003001000000000000
+        byteData: 00010000000101000000000100000000010033000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 070000001200000001000000120000000f000000110000000f00000001000000120000000f000000110000000f0000000100000025000000250000000f0000000f000000010000002500000001000000250000000f0000000100000014000000250000000f0000000f00000007000000010000000100000014000000230000001c0000000f0000000f0000000f0000000700000001000000010000000700000017000000110000001400000007000000120000001700000013000000
+        paramDataType: 110000001100000001000000250000000f0000000f0000001400000018000000070000002500000001000000250000000f0000000100000014000000250000000f0000000f000000070000000100000014000000230000001c0000000f0000000f0000000f000000070000000100000001000000070000001700000011000000
         paramName:
-        - logLevel
-        - text
-        - sendToUnityLog
-        - axisName
-        - multiplier
-        - invert
-        - store
+        - boolVariable
+        - boolValue
         - everyFrame
-        - axisName
-        - multiplier
-        - invert
-        - store
-        - everyFrame
-        - vector2Variable
-        - vector2Value
-        - x
-        - y
-        - everyFrame
+        - storeVector2
+        - storeX
+        - storeY
+        - gameObject
+        - inputAction
+        - updateMode
         - vector2Variable
         - everyFrame
         - vector2Variable
@@ -762,7 +790,6 @@ MonoBehaviour:
         - x
         - y
         - space
-        - perSecond
         - everyFrame
         - gameObject
         - quaternion
@@ -776,20 +803,15 @@ MonoBehaviour:
         - key
         - sendEvent
         - storeResult
-        - gameObject
-        - trigger
-        - collideTag
-        - sendEvent
-        - storeCollider
-        paramDataPos: 0000000000000000040000000100000000000000000000000100000005000000020000000200000001000000030000000600000000000000010000000400000005000000070000000200000008000000030000000600000009000000000000000400000007000000080000000a0000000e0000000f000000010000000000000000000000090000000a0000000b000000100000001400000015000000160000000000000002000000020000001a000000030000000100000000000000
-        paramByteDataSize: 0400000000000000010000000000000000000000000000000000000001000000000000000000000000000000000000000100000000000000000000000000000000000000010000000000000001000000000000000000000001000000000000000000000000000000000000000400000001000000010000000000000000000000000000000000000000000000000000000400000001000000010000000400000000000000000000000000000004000000000000000000000000000000
+        paramDataPos: 000000000100000000000000000000000000000001000000000000000000000001000000010000000500000002000000020000000600000001000000030000000300000004000000070000000b0000000200000000000000000000000500000006000000070000000c0000001000000011000000120000000000000002000000
+        paramByteDataSize: 0000000000000000010000000000000000000000000000000000000000000000040000000000000001000000000000000000000001000000000000000000000000000000000000000400000001000000000000000000000000000000000000000000000000000000040000000100000001000000040000000000000000000000
     - name: Running
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 353.53125
-        y: 109.109375
+        x: 368.8203
+        y: 102.53906
         width: 163.74399
         height: 32
       isBreakpoint: 0
@@ -807,32 +829,38 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.GetAxis
-        - HutongGames.PlayMaker.Actions.GetAxis
-        - HutongGames.PlayMaker.Actions.SetVector2XY
+        - HutongGames.PlayMaker.Actions.SetBoolValue
+        - HutongGames.PlayMaker.Actions.PlayerInputGetVector2
         - HutongGames.PlayMaker.Actions.Vector2Normalize
         - HutongGames.PlayMaker.Actions.Vector2Multiply
-        - HutongGames.PlayMaker.Actions.TranslatePosition2d
+        - HutongGames.PlayMaker.Actions.SetVelocity2d
         - HutongGames.PlayMaker.Actions.SetRotation
         - HutongGames.PlayMaker.Actions.GetKeyUp
         - HutongGames.PlayMaker.Actions.SendEvent
         customNames:
         - 
         - 
-        - Set Vector2 XY
         - 
         - 
         - 
         - 
         - 
         - 
-        actionEnabled: 010101010101010101
-        actionIsOpen: 000000000000000000
-        actionStartIndex: 00000000050000000a0000000f00000011000000140000001b0000002400000027000000
-        actionHashCodes: 11839a0011839a00f9bc2503c612680230525b010cf26a00979e4104ff77a9045e69bb04
+        actionEnabled: 0101010101010101
+        actionIsOpen: 0000000000000001
+        actionStartIndex: 0000000003000000090000000b0000000e000000140000001d00000020000000
+        actionHashCodes: 27fbe10340103905c612680230525b0168fde304979e4104c7b4ad045e69bb04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 0
           gameObject:
             useVariable: 0
@@ -853,7 +881,7 @@ MonoBehaviour:
         functionCallParams: []
         fsmTemplateControlParams: []
         fsmEventTargetParams:
-        - target: 1
+        - target: 2
           excludeSelf:
             useVariable: 0
             name: 
@@ -862,21 +890,21 @@ MonoBehaviour:
             networkSync: 0
             value: 0
           gameObject:
-            ownerOption: 1
+            ownerOption: 0
             gameObject:
               useVariable: 0
               name: 
               tooltip: 
               showInInspector: 0
               networkSync: 0
-              value: {fileID: 5251116887971474958, guid: 12f32ce907b6b80459762c21139b56fb, type: 3}
+              value: {fileID: 0}
           fsmName:
             useVariable: 0
             name: 
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            value: 
+            value: NoiseManager
           sendToChildren:
             useVariable: 0
             name: 
@@ -887,56 +915,27 @@ MonoBehaviour:
           fsmComponent: {fileID: 0}
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams:
+        fsmStringParams: []
+        fsmObjectParams:
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: Horizontal
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: Vertical
-        fsmObjectParams: []
+          typeName: UnityEngine.InputSystem.InputActionReference
+          value: {fileID: -1680190386980627800, guid: 74e97c79fe3e541469f86b5d37225eb1, type: 3}
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
-        - useVariable: 0
+        - useVariable: 1
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
-        - useVariable: 1
-          name: InputX
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
           value: 0
-        - useVariable: 0
+        - useVariable: 1
           name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 1
-          name: InputY
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: InputX
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: InputY
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -946,7 +945,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 4
+          value: 5
         - useVariable: 1
           name: 
           tooltip: 
@@ -985,8 +984,8 @@ MonoBehaviour:
           value: 0
         fsmIntParams: []
         fsmBoolParams:
-        - useVariable: 0
-          name: 
+        - useVariable: 1
+          name: IsRunning
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -996,7 +995,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         - useVariable: 1
           name: 
           tooltip: 
@@ -1004,12 +1003,6 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         fsmVector2Params:
-        - useVariable: 1
-          name: PlayerMoveDirection
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0}
         - useVariable: 1
           name: PlayerMoveDirection
           tooltip: 
@@ -1052,29 +1045,23 @@ MonoBehaviour:
           value: {x: 0, y: 0, z: 0, w: 0}
         stringParams:
         - PlayerRunningFalse
-        - RunningNoiseEvent
-        byteData: 01010101010000000001010000000001003001000000
+        - PlayerIsRunning
+        byteData: 0001000000010100000000010000000001003300000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 120000000f000000110000000f00000001000000120000000f000000110000000f0000000100000025000000250000000f0000000f000000010000002500000001000000250000000f0000000100000014000000250000000f0000000f00000007000000010000000100000014000000230000001c0000000f0000000f0000000f0000000700000001000000010000000700000017000000110000001f000000170000000f00000001000000
+        paramDataType: 110000001100000001000000250000000f0000000f0000001400000018000000070000002500000001000000250000000f0000000100000014000000250000000f0000000f000000070000000100000014000000230000001c0000000f0000000f0000000f0000000700000001000000010000000700000017000000110000001f000000170000000f00000001000000
         paramName:
-        - axisName
-        - multiplier
-        - invert
-        - store
+        - boolVariable
+        - boolValue
         - everyFrame
-        - axisName
-        - multiplier
-        - invert
-        - store
-        - everyFrame
-        - vector2Variable
-        - vector2Value
-        - x
-        - y
-        - everyFrame
+        - storeVector2
+        - storeX
+        - storeY
+        - gameObject
+        - inputAction
+        - updateMode
         - vector2Variable
         - everyFrame
         - vector2Variable
@@ -1085,7 +1072,6 @@ MonoBehaviour:
         - x
         - y
         - space
-        - perSecond
         - everyFrame
         - gameObject
         - quaternion
@@ -1103,15 +1089,15 @@ MonoBehaviour:
         - sendEvent
         - delay
         - everyFrame
-        paramDataPos: 00000000000000000000000001000000000000000100000002000000010000000300000001000000000000000100000004000000050000000200000002000000030000000300000006000000040000000000000004000000070000000800000005000000090000000a000000010000000000000000000000090000000a0000000b0000000b0000000f0000001000000011000000000000000200000000000000010000000c00000015000000
-        paramByteDataSize: 00000000000000000000000000000000010000000000000000000000000000000000000001000000000000000000000000000000000000000100000000000000010000000000000000000000010000000000000000000000000000000000000004000000010000000100000000000000000000000000000000000000000000000000000004000000010000000100000004000000000000000000000000000000000000000000000001000000
+        paramDataPos: 000000000100000000000000000000000000000001000000000000000000000001000000010000000500000002000000020000000600000001000000030000000300000004000000070000000b0000000200000000000000000000000500000006000000070000000c000000100000001100000012000000000000000200000000000000010000000800000016000000
+        paramByteDataSize: 000000000000000001000000000000000000000000000000000000000000000004000000000000000100000000000000000000000100000000000000000000000000000000000000040000000100000000000000000000000000000000000000000000000000000004000000010000000100000004000000000000000000000000000000000000000000000001000000
     - name: Hiding
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 54.5
-        y: 271.25
+        x: 69.44531
+        y: 235.64062
         width: 151.25601
         height: 32
       isBreakpoint: 0
@@ -1135,9 +1121,9 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 0101
-        actionIsOpen: 0101
+        actionIsOpen: 0100
         actionStartIndex: 0000000003000000
-        actionHashCodes: 9c59e501ff77a904
+        actionHashCodes: 9c59e501c7b4ad04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -1174,91 +1160,7 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - PlayerHidingFalse
-        byteData: 000000000165000000
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 070000001200000001000000070000001700000011000000
-        paramName:
-        - logLevel
-        - text
-        - sendToUnityLog
-        - key
-        - sendEvent
-        - storeResult
-        paramDataPos: 000000000000000004000000050000000000000000000000
-        paramByteDataSize: 040000000000000001000000040000000000000000000000
-    - name: HidePrompt
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 54.804688
-        y: 199.20312
-        width: 146.904
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: PlayerHidingTrue
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: Hiding
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.DebugLog
-        - HutongGames.PlayMaker.Actions.GetKeyDown
-        customNames:
-        - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000003000000
-        actionHashCodes: 9c59e501ff77a904
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: Hiding Prompt
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - PlayerHidingTrue
-        byteData: 000000000165000000
+        byteData: 000000000113000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
@@ -1292,6 +1194,9 @@ MonoBehaviour:
     - name: PlayerHidingFalse
       isSystemEvent: 0
       isGlobal: 0
+    - name: PlayerIsRunning
+      isSystemEvent: 0
+      isGlobal: 1
     globalTransitions: []
     variables:
       floatVariables:
@@ -1355,6 +1260,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
+      - useVariable: 1
+        name: PlayerMove
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       intVariables: []
       boolVariables:
       - useVariable: 1
@@ -1365,6 +1276,18 @@ MonoBehaviour:
         value: 0
       - useVariable: 1
         name: 
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: IsInHidingRange
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -1450,6 +1373,18 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {x: 0, y: 0, z: 0}
+      - useVariable: 1
+        name: PlayerMoveVector
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0}
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0}
       colorVariables: []
       rectVariables: []
       quaternionVariables: []
@@ -1461,7 +1396,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -1509,76 +1444,830 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
---- !u!50 &4537219280770142288
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8630048517006486397}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &2802562285944186926
-BoxCollider2D:
+--- !u!114 &4534856474366080298
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8630048517006486397}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 2}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PlayMaker.dll::PlayMakerFSM
+  fsm:
+    dataVersion: 2
+    usedInTemplate: {fileID: 0}
+    name: NoiseManager
+    startState: Idle
+    states:
+    - name: Idle
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 349.20312
+        y: 105.203125
+        width: 162.896
+        height: 64
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: RunningNoiseEvent
+          isSystemEvent: 0
+          isGlobal: 1
+        toState: Running Noise Event
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 7
+      - fsmEvent:
+          name: SmallTicNoiseEvent
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Small Tic Noise Event
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 4
+      - fsmEvent:
+          name: LargeTicNoiseEvent
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Large Tic Noise Event
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    - name: Running Noise Event
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 646.08594
+        y: 100.234375
+        width: 169.84799
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: RunningNoiseEvent
+          isSystemEvent: 0
+          isGlobal: 1
+        toState: Running Noise Event
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: NoiseEventEnded
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Idle
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 7
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.GetPosition2d
+        - HutongGames.PlayMaker.Actions.SendEvent
+        - HutongGames.PlayMaker.Actions.Wait
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.BoolTest
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 010101010101
+        actionIsOpen: 000000000000
+        actionStartIndex: 00000000050000000b0000000f0000001200000017000000
+        actionHashCodes: b2cf100068fde3045e69bb0448c01101b2cf1000a4c8bf00
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 7181090250278678009}
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 7181090250278678009}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 1
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 0
+              name: 
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 7057886826344583750, guid: 12f32ce907b6b80459762c21139b56fb, type: 3}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 2
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: IsRunning
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params:
+        - useVariable: 1
+          name: PlayerNoisePosition
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0}
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - RunningNoiseEvent
+        - 
+        - RunningNoiseEvent
+        - NoiseEventEnded
+        byteData: 000000000000000001000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 140000001100000011000000010000000100000014000000250000000f0000000f00000007000000010000001f000000170000000f000000010000000f0000001700000001000000140000001100000011000000010000000100000011000000170000001700000001000000
+        paramName:
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - vector_2d
+        - x
+        - y
+        - space
+        - everyFrame
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        - time
+        - finishEvent
+        - realTime
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        paramDataPos: 000000000000000001000000000000000100000001000000000000000000000001000000020000000600000000000000000000000200000007000000030000000100000008000000020000000200000003000000090000000a0000000400000002000000030000000b000000
+        paramByteDataSize: 000000000000000000000000010000000100000000000000000000000000000000000000040000000100000000000000000000000000000001000000000000000000000001000000000000000000000000000000010000000100000000000000000000000000000001000000
+    - name: Small Tic Noise Event
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 345.5
+        y: 218.28125
+        width: 174.664
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: NoiseEventEnded
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Idle
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 4
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 00
+        actionStartIndex: 00000000
+        actionHashCodes: b2cf1000
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 869238520103153666}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0001
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1400000011000000110000000100000001000000
+        paramName:
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        paramDataPos: 0000000000000000010000000000000001000000
+        paramByteDataSize: 0000000000000000000000000100000001000000
+    - name: Large Tic Noise Event
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 51.367188
+        y: 98.453125
+        width: 175.208
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: NoiseEventEnded
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Idle
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 00
+        actionStartIndex: 00000000
+        actionHashCodes: b2cf1000
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 298612914751182987}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0001
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1400000011000000110000000100000001000000
+        paramName:
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        paramDataPos: 0000000000000000010000000000000001000000
+        paramByteDataSize: 0000000000000000000000000100000001000000
+    events:
+    - name: LargeTicNoiseEvent
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: NoiseEventEnded
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: RunningNoiseEvent
+      isSystemEvent: 0
+      isGlobal: 1
+    - name: SmallTicNoiseEvent
+      isSystemEvent: 0
+      isGlobal: 0
+    globalTransitions: []
+    variables:
+      floatVariables: []
+      intVariables: []
+      boolVariables: []
+      stringVariables: []
+      vector2Variables:
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0}
+      vector3Variables: []
+      colorVariables: []
+      rectVariables: []
+      quaternionVariables: []
+      gameObjectVariables: []
+      objectVariables: []
+      materialVariables: []
+      textureVariables: []
+      arrayVariables: []
+      enumVariables: []
+      categories:
+      - 
+      variableCategoryIDs: 00000000
+    description: 
+    docUrl: 
+    showStateLabel: 0
+    maxLoopCount: 0
+    watermark: 
+    password: 
+    locked: 0
+    manualUpdate: 0
+    outVariableIndices: 
+    keepDelayedEventsOnStateExit: 0
+    preprocessed: 0
+    ExposedEvents: []
+    OutputEvents: []
+    RestartOnEnable: 1
+    ResetVariablesOnEnable: 0
+    EnableDebugFlow: 0
+    EnableBreakpoints: 1
+    editorFlags: 225
+    activeStateName: 
+    mouseEvents: 0
+    handleLevelLoaded: 0
+    handleTriggerEnter2D: 0
+    handleTriggerExit2D: 0
+    handleTriggerStay2D: 0
+    handleCollisionEnter2D: 0
+    handleCollisionExit2D: 0
+    handleCollisionStay2D: 0
+    handleTriggerEnter: 0
+    handleTriggerExit: 0
+    handleTriggerStay: 0
+    handleCollisionEnter: 0
+    handleCollisionExit: 0
+    handleCollisionStay: 0
+    handleParticleCollision: 0
+    handleControllerColliderHit: 0
+    handleJointBreak: 0
+    handleJointBreak2D: 0
+    handleOnGUI: 0
+    handleFixedUpdate: 0
+    handleLateUpdate: 0
+    handleApplicationEvents: 0
+    handleUiEvents: 0
+    handleLegacyNetworking: 0
+    handleAnimatorMove: 0
+    handleAnimatorIK: 0
+  fsmTemplate: {fileID: 0}
+  eventHandlerComponentsAdded: 0
+--- !u!114 &1448996207557278783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8630048517006486397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PlayMaker.dll::PlayMakerFSM
+  fsm:
+    dataVersion: 2
+    usedInTemplate: {fileID: 0}
+    name: Tics
+    startState: NoPremonitoryUrge
+    states:
+    - name: NoPremonitoryUrge
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 50
+        y: 100
+        width: 225.56
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: PremonitoryUrgeActiveEvent
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: PremonitoryUrgeActive
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.RandomWait
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 0d5f5c01
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: MinUrgeWait
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 2.5
+        - useVariable: 1
+          name: MaxUrgeWait
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 10
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - PremonitoryUrgeActiveEvent
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000000f0000001700000001000000
+        paramName:
+        - min
+        - max
+        - finishEvent
+        - realTime
+        paramDataPos: 00000000010000000000000000000000
+        paramByteDataSize: 00000000000000000000000001000000
+    - name: PremonitoryUrgeActive
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 60.414062
+        y: 170.20312
+        width: 187.576
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    events:
+    - name: PremonitoryUrgeActiveEvent
+      isSystemEvent: 0
+      isGlobal: 0
+    globalTransitions: []
+    variables:
+      floatVariables:
+      - useVariable: 1
+        name: MinUrgeWait
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 2.5
+      - useVariable: 1
+        name: MaxUrgeWait
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 10
+      - useVariable: 1
+        name: SuppressibleTime
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      intVariables: []
+      boolVariables: []
+      stringVariables: []
+      vector2Variables: []
+      vector3Variables: []
+      colorVariables: []
+      rectVariables: []
+      quaternionVariables: []
+      gameObjectVariables: []
+      objectVariables: []
+      materialVariables: []
+      textureVariables: []
+      arrayVariables: []
+      enumVariables: []
+      categories:
+      - 
+      variableCategoryIDs: 000000000000000000000000
+    description: 
+    docUrl: 
+    showStateLabel: 0
+    maxLoopCount: 0
+    watermark: 
+    password: 
+    locked: 0
+    manualUpdate: 0
+    outVariableIndices: 
+    keepDelayedEventsOnStateExit: 0
+    preprocessed: 0
+    ExposedEvents: []
+    OutputEvents: []
+    RestartOnEnable: 1
+    ResetVariablesOnEnable: 0
+    EnableDebugFlow: 0
+    EnableBreakpoints: 1
+    editorFlags: 225
+    activeStateName: 
+    mouseEvents: 0
+    handleLevelLoaded: 0
+    handleTriggerEnter2D: 0
+    handleTriggerExit2D: 0
+    handleTriggerStay2D: 0
+    handleCollisionEnter2D: 0
+    handleCollisionExit2D: 0
+    handleCollisionStay2D: 0
+    handleTriggerEnter: 0
+    handleTriggerExit: 0
+    handleTriggerStay: 0
+    handleCollisionEnter: 0
+    handleCollisionExit: 0
+    handleCollisionStay: 0
+    handleParticleCollision: 0
+    handleControllerColliderHit: 0
+    handleJointBreak: 0
+    handleJointBreak2D: 0
+    handleOnGUI: 0
+    handleFixedUpdate: 0
+    handleLateUpdate: 0
+    handleApplicationEvents: 0
+    handleUiEvents: 0
+    handleLegacyNetworking: 0
+    handleAnimatorMove: 0
+    handleAnimatorIK: 0
+  fsmTemplate: {fileID: 0}
+  eventHandlerComponentsAdded: 0
