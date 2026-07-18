@@ -1378,7 +1378,7 @@ MonoBehaviour:
         customNames:
         - 
         actionEnabled: 01
-        actionIsOpen: 00
+        actionIsOpen: 01
         actionStartIndex: 00000000
         actionHashCodes: 20a9b100
         unityObjectParams: []
@@ -1396,7 +1396,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 
+          value: StartScene
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -1431,7 +1431,7 @@ MonoBehaviour:
         stringParams:
         - 
         - 
-        byteData: 00000000
+        byteData: 01000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
