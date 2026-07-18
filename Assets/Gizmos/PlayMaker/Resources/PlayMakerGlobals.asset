@@ -28,6 +28,30 @@ MonoBehaviour:
       showInInspector: 0
       networkSync: 0
       value: 0
+    - useVariable: 1
+      name: IsRMBDown
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: IsFirstEnterPaintingTrigger
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 1
+    - useVariable: 1
+      name: IsFirstEnterHideTrigger
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 1
+    - useVariable: 1
+      name: IsFirstEnterDoorTrigger
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 1
     stringVariables: []
     vector2Variables:
     - useVariable: 1
@@ -54,13 +78,31 @@ MonoBehaviour:
     enumVariables: []
     categories:
     - 
-    variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000
+    variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   events:
-  - RunningNoiseEvent
-  - PlayerIsRunning
-  - LOSS STATE
-  - WINSTATE
-  - WIN STATE
-  - GoToPlay
-  - GoToLose
-  - GoToWin
+  - GO TO LOSE
+  - GO TO PLAY
+  - GO TO WIN
+  - QUIT GAME
+  - ENTER PAINTING TRIGGER
+  - ENTER HIDE TRIGGER
+  - EXIT HIDE TRIGGER
+  - ENTER DOOR TRIGGER
+  - EXIT DOOR TRIGGER
+  - EXIT PAINTING TRIGGER
+  - PLAYER RUNNING TRUE
+  - PLAYER HIDING FALSE
+  - PLAYER HIDING TRUE
+  - PLAYER RUNNING FALSE
+  - PICK UP PAINTING
+  - PREMONITORY URGE ACTIVE
+  - PLAYER HEARD
+  - PLAYER IN VISION
+  - PLAYER LEFT VISION
+  - LG TIC NOISE EVENT
+  - SM TIC NOISE EVENT
+  - INCORRECT PAINTING
+  - CORRECT PAINTING
+  - DISABLE DOOR UI
+  - DISABLE INCORRECT PAINTING TEXT
+  - DISABLE CORRECT PAINTING UI
